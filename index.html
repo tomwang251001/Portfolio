@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:regular,italic,700" rel="stylesheet" />
+    <style>
+        .name{
+            font-family: Russo One;
+            font-size: 65px;
+            color: white;
+            padding-bottom: 15px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1 class="name">Tom Wang</h1>
+            <p class="title">Full-stack Developer</p>
+            <button class="about" onclick="about()">About Me</button>
+        </div>
+        <img class="logo" src="img/logo.png" alt="">
+        <div class="links">
+            <button class="github" onclick="github()">
+                <span class="svgContainer">
+                  <svg fill="white" viewBox="0 0 496 512" height="2.8em"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                </span>
+                <span class="BG" style="border: 1px solid rgb(71, 71, 71);"></span>
+            </button>
+            <button class="linkedin" onclick="linkedin()">
+                <span class="svgContainer">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="2.8em" viewBox="0 0 24 24">
+                    <path
+                      d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"
+                    ></path>
+                  </svg>
+                </span>
+                <span class="BG"></span>
+              </button>
+            <button class="mail">
+                <span class="svgContainer">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2.8em" viewBox="0 0 24 24"><g fill="none" stroke="red" stroke-width="2"><path stroke-linecap="round" d="M21 12a9 9 0 1 0-6.67 8.693"/><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M16 9v4.5a2.5 2.5 0 0 0 2.5 2.5v0a2.5 2.5 0 0 0 2.5-2.5V12"/></g></svg>
+                </span>
+                <span class="BG"></span>
+            </button>
+        </div>
+        <div class="card" style="background-color: white;">
+          <svg class="cross" onclick="about_close()" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" height="5em" viewBox="0 0 24 24"><path d="M16.066 8.995a.75.75 0 1 0-1.06-1.061L12 10.939L8.995 7.934a.75.75 0 1 0-1.06 1.06L10.938 12l-3.005 3.005a.75.75 0 0 0 1.06 1.06L12 13.06l3.005 3.006a.75.75 0 0 0 1.06-1.06L13.062 12z"/></svg>
+          <p class="bg-logo" style="font-family: Russo One;">About</p>
+          <div class="card-content" style="margin: 80px;">
+            <h1 class="header" style="margin-bottom: 50px; font-family: Russo One">About Me</h1>
+            <p class="text" style="font-family: Arial, Helvetica, sans-serif;">Hi, I'm Tom Wang, a 22-year-old up-and-coming <span style="color: orangered; font-weight:bold;">full-stack developer</span>. Aside from currently doing my Bachelor in <span style="color: orangered; font-weight:bold;">Computer Science</span>, I'm just another weird guy interested in developing rich web applications, be it front-end or back-end.<br>I like to work on <span style="color: orangered; font-weight:bold;">functionalities</span> and create <span style="color: orangered; font-weight:bold;">smart user interfaces</span> in order to make the experience on the web even more fun. <span style="color: orangered; font-weight:bold;">For Hire.</span></p>
+          </div>
+          <div class="css-box">
+            <svg class="css" xmlns="http://www.w3.org/2000/svg" height="4.3em" viewBox="0 0 24 24"><path d="m3 2l1.6 17.8L12 22l7.5-2.2L21 2zm13.3 14.7L12 18l-4.3-1.2l-.3-3.1h2.1l.2 1.5l2.3.6l2.3-.6l.3-3H7.3l-.2-2h7.7l.1-2H7l-.2-2h10.6l-1 10.6Z"/></svg>
+            <p class="css-text" style="font-family: Russo One;">
+              CSS
+            </p>
+          </div>
+          <div class="js-box">
+            <svg class="js" xmlns="http://www.w3.org/2000/svg" height="4.3em" viewBox="0 0 32 32"><path d="M2 2v28h28V2zm15.238 21.837c0 2.725-1.6 3.969-3.931 3.969c-2.106 0-3.325-1.087-3.95-2.406l2.144-1.294c.413.731.788 1.35 1.694 1.35c.862 0 1.412-.338 1.412-1.656v-8.944h2.631zm6.224 3.969c-2.444 0-4.025-1.162-4.794-2.688l2.144-1.237c.563.919 1.3 1.6 2.594 1.6c1.087 0 1.788-.544 1.788-1.3c0-.9-.713-1.219-1.919-1.75l-.656-.281c-1.9-.806-3.156-1.825-3.156-3.969c0-1.975 1.506-3.475 3.85-3.475c1.675 0 2.875.581 3.738 2.106l-2.05 1.313c-.45-.806-.938-1.125-1.694-1.125c-.768 0-1.256.488-1.256 1.125c0 .788.488 1.106 1.619 1.6l.656.281c2.238.956 3.494 1.938 3.494 4.137c0 2.363-1.863 3.662-4.357 3.662z"/></svg>
+            <p class="js-text" style="font-family: Russo One;">
+              JavaScript
+            </p>
+          </div>
+          <div class="php-box">
+            <svg class="php" xmlns="http://www.w3.org/2000/svg" height="4.3em" viewBox="0 0 24 24"><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314c.272-.21.455-.559.55-1.049c.092-.47.05-.802-.124-.995c-.175-.193-.523-.29-1.047-.29M12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312m-3.26 7.451c-.261.25-.575.438-.917.551c-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628c.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703m4.024.715l.543-2.799c.063-.318.039-.536-.068-.651c-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628c.366.417.477 1.001.331 1.751m-2.595-1.382h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314c.272-.21.455-.559.551-1.049c.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29"/></svg>
+            <p class="php-text" style="font-family: Russo One;">
+              PHP
+            </p>
+          </div>
+          <div class="html-box">
+            <svg class="html" xmlns="http://www.w3.org/2000/svg" height="4.3em" viewBox="0 0 24 24"><path d="m3 2l1.6 17.8L12 22l7.5-2.2L21 2zm14 6H9l.2 2H17l-.6 6.6l-4.2 1.4l-4.3-1.4l-.3-3h2l.2 1.4l2.4.8l2.3-.7l.3-3H7.4L7 6h10.4z"/></svg>
+            <p class="html-text" style="font-family: Russo One;">
+              HTML
+            </p>
+          </div>
+          <div class="ts-box">
+            <svg class="ts" xmlns="http://www.w3.org/2000/svg" height="3.8em" viewBox="0 0 15 15"><path fill-rule="evenodd" d="M0 0h15v15H0zm10 6a2 2 0 1 0 0 4h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1H8a2 2 0 0 0 2 2h1a2 2 0 1 0 0-4h-1a1 1 0 0 1 0-2h1.167c.46 0 .833.373.833.833V8h1v-.167C13 6.821 12.18 6 11.167 6zM3 6h5v1H6v6H5V7H3z" clip-rule="evenodd"/></svg>
+            <p class="ts-text" style="font-family: Russo One;">
+              TypeScript
+            </p>
+          </div>
+          <div class="symfony-box">
+            <svg class="symfony" xmlns="http://www.w3.org/2000/svg" height="4.3em" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m4.37 3.7c1.02-.03 1.78.43 1.84 1.14c.01.31-.17.91-.79.93c-.47.02-.79-.27-.8-.68c-.01-.16.26-.67.26-.76c-.01-.27-.41-.28-.52-.27c-1.5.05-1.9 2.07-2.22 3.72l-.14.87c.84.13 1.46-.03 1.8-.25c.48-.31-.14-.63-.06-.99c.08-.37.41-.54.67-.55c.37-.01.63.37.62.76c-.03.64-.86 1.52-2.53 1.48c-.22 0-.41-.02-.59-.04c-.61 3.1-.99 4.94-2.35 6.52c-1.17 1.39-2.36 1.6-2.89 1.62c-1 .04-1.67-.49-1.67-1.2c-.03-.68.57-1.06.97-1.07c.53-.02.9.37.91.81c.02.37-.18.49-.31.56c-.07.07-.22.15-.21.3c0 .07.07.22.29.21c.42-.01.69-.22.89-.36c.96-.8 1.34-2.21 1.83-4.77c.26-1.45.45-2.38.73-3.3c-.68-.51-1.1-1.15-2.01-1.38c-.63-.19-1.01-.04-1.28.3c-.31.41-.21.93.09 1.24c1.15 1.28 1.49 1.84 1.36 2.6c-.2 1.21-1.64 2.13-3.34 1.61c-1.45-.45-1.72-1.47-1.55-2.04c.16-.49.55-.59.94-.47c.42.13.58.63.46 1.02c-.02.04-.22.41-.27.53c-.09.31.33.52.62.61c.65.2 1.28-.14 1.43-.67c.15-.48-.15-.82-.28-.95c-.89-.98-1.51-1.85-1.21-2.83c.12-.37.36-.77.72-1.04c.75-.55 1.57-.65 2.34-.41c1.01.27 1.49.94 2.12 1.45c.35-1.02.84-2.03 1.57-2.88c.66-.77 1.54-1.33 2.56-1.37"/></svg>
+            <p class="symfony-text" style="font-family: Russo One;">
+              Symfony
+            </p>
+          </div>
+          <div class="angular-box">
+            <svg class="angular" xmlns="http://www.w3.org/2000/svg" height="4.7em" viewBox="0 0 24 24"><path d="m12 2.5l8.84 3.15l-1.34 11.7L12 21.5l-7.5-4.15l-1.34-11.7zm0 2.1L6.47 17h2.06l1.11-2.78h4.7L15.45 17h2.05zm1.62 7.9h-3.23L12 8.63z"/></svg>
+            <p class="angular-text" style="font-family: Russo One;">
+              Angular
+            </p>
+          </div>
+        </div>
+    </div>
+    <div class="works">
+      <p class="works_header" style="font-family: Russo One;">
+        Latest Works
+      </p>
+      <div class="photography" style="cursor: pointer;">
+        <div class="overlay"></div>
+        <div class="veil"></div>
+        <div class="project">
+          <p class="project_name">Photography Portfolio<p>
+          <p class="project_description">
+            Online portfolio for a wildlife photographer
+          </p>
+        </div>
+        <div class="no">
+          <svg xmlns="http://www.w3.org/2000/svg" height="9em" viewBox="0 0 24 24"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 17V7l7 10V7m4 10h5m-5-7a2.5 3 0 1 0 5 0a2.5 3 0 1 0-5 0"/></svg>
+        </div>
+        <div class="digits">
+          <div class="zero">
+            <svg xmlns="http://www.w3.org/2000/svg" height="22em" viewBox="0 0 24 24"><path d="M11 7a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm0 2h2v6h-2z"/></svg>
+          </div>
+          <div class="one">
+            <svg style="left: 0px;" xmlns="http://www.w3.org/2000/svg" height="22em" viewBox="0 0 24 24"><path d="M10 7v2h2v8h2V7z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="particles-js">
+    </div>
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+    <script src="buttons.js"></script>
+</body>
+</html>

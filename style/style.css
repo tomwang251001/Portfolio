@@ -1,0 +1,629 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* ---- particles.js container ---- */
+  /* ---- stats.js ---- */
+}
+body .hero {
+  padding: 25px 0 0 25px;
+  background-color: rgb(28, 29, 37);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+body .hero .container {
+  position: absolute;
+  left: 40vh;
+  top: 35vh;
+  z-index: 11;
+}
+body .hero .container .title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  color: white;
+}
+body .hero .container .about {
+  padding: 10px 20px 10px 20px;
+  text-transform: capitalize;
+  text-decoration: none;
+  margin-top: 30px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  font-family: Russo One;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+body .hero .container .about:hover {
+  color: white;
+  border: 1px solid rgb(240, 95, 71);
+}
+body .hero .container .about:hover::before {
+  width: 160%;
+}
+body .hero .container .about::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: rgb(240, 95, 71);
+  z-index: -1;
+  transition: all 1s;
+}
+body .hero img {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  height: 35vh;
+  z-index: 8;
+}
+body .hero .links {
+  width: 150px;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  margin-left: auto;
+  z-index: 11;
+}
+body .hero .links .github {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 10;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+body .hero .links .github .svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgb(71, 71, 71);
+}
+body .hero .links .github .BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+body .hero .links .github:hover .BG {
+  transform: rotate(-35deg);
+  transform-origin: bottom;
+  background-color: black;
+}
+body .hero .links .github:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  border: 1px solid rgba(156, 156, 156, 0.466);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+body .hero .links .linkedin {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 10;
+  margin-bottom: 20px;
+}
+body .hero .links .linkedin .svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgb(10, 102, 194);
+}
+body .hero .links .linkedin .BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgb(10, 102, 194);
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+body .hero .links .linkedin:hover .BG {
+  transform: rotate(-35deg);
+  transform-origin: bottom;
+}
+body .hero .links .linkedin:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  border: 1px solid rgba(156, 156, 156, 0.466);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+body .hero .links .mail {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 10;
+  margin-bottom: 20px;
+}
+body .hero .links .mail .svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid white;
+}
+body .hero .links .mail .BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+body .hero .links .mail:hover .BG {
+  transform: rotate(-35deg);
+  transform-origin: bottom;
+}
+body .hero .links .mail:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  border: 1px solid rgba(156, 156, 156, 0.466);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+body .hero .card {
+  width: 35%;
+  height: 0vh;
+  opacity: 0;
+  position: absolute;
+  top: 7%;
+  right: 50%;
+  overflow: hidden;
+  z-index: 12;
+  transition: 0.3s ease-in-out;
+}
+body .hero .card .cross {
+  position: absolute;
+  left: 85%;
+  z-index: 14;
+  transition: 0.3s ease-in-out;
+  fill: black;
+}
+body .hero .card .cross:hover {
+  fill: red;
+  transform: rotate(90deg);
+}
+body .hero .card .bg-logo {
+  color: rgb(244, 244, 244);
+  font-size: 200px;
+  position: absolute;
+  top: 2%;
+  left: 20%;
+  z-index: 13;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body .hero .card .card-content {
+  position: absolute;
+  z-index: 14;
+}
+body .hero .card .css-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 14;
+  top: 60%;
+  left: 73%;
+  height: 105px;
+  border-radius: 25px;
+}
+body .hero .card .css-box:hover .css-text {
+  opacity: 1;
+  translate: 0 -15px;
+}
+body .hero .card .css-box .css {
+  transition: 0.17s ease-in-out;
+  border-radius: 25px;
+}
+body .hero .card .css-box .css:hover {
+  fill: red;
+}
+body .hero .card .css-box .css-text {
+  margin-left: 27%;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.17s ease-in-out;
+}
+body .hero .card .js-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 14;
+  top: 60%;
+  left: 53%;
+  height: 105px;
+  border-radius: 25px;
+}
+body .hero .card .js-box:hover .js-text {
+  opacity: 1;
+  translate: 0 -15px;
+}
+body .hero .card .js-box .js {
+  transition: 0.17s ease-in-out;
+}
+body .hero .card .js-box .js:hover {
+  fill: yellow;
+}
+body .hero .card .js-box .js-text {
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.17s ease-in-out;
+}
+body .hero .card .php-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 14;
+  top: 60%;
+  left: 33%;
+  height: 105px;
+  border-radius: 25px;
+}
+body .hero .card .php-box:hover .php-text {
+  opacity: 1;
+  translate: 0 -15px;
+}
+body .hero .card .php-box .php {
+  transition: 0.17s ease-in-out;
+}
+body .hero .card .php-box .php:hover {
+  fill: rgb(122, 134, 184);
+}
+body .hero .card .php-box .php-text {
+  opacity: 0;
+  margin-left: 25%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.17s ease-in-out;
+}
+body .hero .card .html-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 14;
+  top: 60%;
+  left: 13%;
+  height: 105px;
+  border-radius: 25px;
+}
+body .hero .card .html-box:hover .html-text {
+  opacity: 1;
+  translate: 0 -15px;
+}
+body .hero .card .html-box .html {
+  transition: 0.17s ease-in-out;
+}
+body .hero .card .html-box .html:hover {
+  fill: rgb(252, 74, 11);
+}
+body .hero .card .html-box .html-text {
+  opacity: 0;
+  margin-left: 18%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.17s ease-in-out;
+}
+body .hero .card .ts-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 14;
+  top: 77%;
+  left: 63%;
+  height: 105px;
+  border-radius: 25px;
+}
+body .hero .card .ts-box:hover .ts-text {
+  opacity: 1;
+  translate: 0 -15px;
+}
+body .hero .card .ts-box .ts {
+  transition: 0.17s ease-in-out;
+}
+body .hero .card .ts-box .ts:hover {
+  fill: rgb(47, 116, 192);
+}
+body .hero .card .ts-box .ts-text {
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.17s ease-in-out;
+}
+body .hero .card .symfony-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 14;
+  top: 77%;
+  left: 43%;
+  height: 105px;
+  border-radius: 25px;
+}
+body .hero .card .symfony-box:hover .symfony-text {
+  opacity: 1;
+  translate: 0 -15px;
+}
+body .hero .card .symfony-box .symfony {
+  transition: 0.17s ease-in-out;
+  fill: white;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 35px;
+}
+body .hero .card .symfony-box .symfony:hover {
+  fill: black;
+  background-color: white;
+}
+body .hero .card .symfony-box .symfony-text {
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.17s ease-in-out;
+}
+body .hero .card .angular-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 14;
+  top: 77%;
+  left: 23%;
+  height: 105px;
+  border-radius: 25px;
+}
+body .hero .card .angular-box:hover .angular-text {
+  opacity: 1;
+  translate: 0 -15px;
+}
+body .hero .card .angular-box .angular {
+  transition: 0.17s ease-in-out;
+}
+body .hero .card .angular-box .angular:hover {
+  fill: rgb(189, 0, 46);
+}
+body .hero .card .angular-box .angular-text {
+  opacity: 0;
+  margin-left: 10%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.17s ease-in-out;
+}
+body .works {
+  height: 200vh;
+  position: relative;
+}
+body .works .works_header {
+  position: absolute;
+  font-size: 2rem;
+  left: 41rem;
+  top: 9rem;
+}
+body .works .photography {
+  position: absolute;
+  left: 21rem;
+  top: 17rem;
+  background-image: url(../img/Photography.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 27rem;
+  width: 56rem;
+  box-shadow: 2px 2px 34px 5px rgba(0, 0, 0, 0.75);
+}
+body .works .photography:hover .veil {
+  width: 56rem;
+}
+body .works .photography:hover .project {
+  scale: 1.1;
+}
+body .works .photography:hover .no {
+  left: 67%;
+  opacity: 1;
+  stroke: white;
+}
+body .works .photography:hover .digits {
+  top: 45%;
+  opacity: 1;
+  animation: fillColor 0.4s forwards;
+}
+body .works .photography .overlay {
+  background-color: rgb(29, 34, 51);
+  height: 27rem;
+  opacity: 0.65;
+  visibility: none;
+}
+body .works .photography .veil {
+  position: absolute;
+  top: 0rem;
+  background-color: rgb(29, 34, 51);
+  background: linear-gradient(to right, rgb(29, 34, 51), rgb(28, 11, 79));
+  height: 27rem;
+  width: 0;
+  opacity: 0.9;
+  transition: all 0.4s ease-in;
+}
+body .works .photography .project {
+  position: absolute;
+  top: 7rem;
+  left: 5rem;
+  transition: all 0.4s ease-out 0.4s;
+}
+body .works .photography .project .project_name {
+  font-size: 3rem;
+  color: white;
+  font-family: Russo One;
+  margin-bottom: 1rem;
+}
+body .works .photography .project .project_description {
+  font-size: 1.5rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+body .works .photography .no {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  opacity: 1;
+  transition: all 0.3s ease-in 0.4s;
+  stroke: grey;
+}
+body .works .photography .digits {
+  position: absolute;
+  left: 68%;
+  top: 80%;
+  opacity: 1;
+  fill: grey;
+  transition: all 0.3s ease-in 0.4s;
+  transform-origin: 50%, 100%;
+  transform-box: fill-box;
+}
+body .works .photography .digits .one {
+  position: absolute;
+  left: 25%;
+  top: 0%;
+}
+@keyframes fillColor {
+  0% {
+    fill: grey;
+  }
+  50% {
+    fill: red;
+  }
+  100% {
+    fill: white;
+  }
+}
+body canvas {
+  display: block;
+  vertical-align: bottom;
+}
+body #particles-js {
+  position: absolute;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  margin: 0;
+  padding: 0;
+  inset: 0;
+  z-index: 9;
+}
+body .count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+body .js-count-particles {
+  font-size: 1.1em;
+}
+body #stats,
+body .count-particles {
+  -webkit-user-select: none;
+}
+body #stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+body .count-particles {
+  border-radius: 0 0 3px 3px;
+}/*# sourceMappingURL=style.css.map */
